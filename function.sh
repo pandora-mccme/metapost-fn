@@ -1,8 +1,12 @@
 #!/usr/bin/bash
 
-cat > /tmp/figure.mp
+WD=$(mktemp -d)
+cd "$WD" || exit 1
+cat > figure.mp
 
-mptopdf /tmp/figure.mp
-pdftosvg /tmp/figure-1.pdf /tmp/figure.svg
+mptopdf figure.mp > /dev/stderr
+pdf2svg figure-1.pdf figure.svg > /dev/stderr
 
-cat /tmp/figure.svg
+cat figure.svg
+cd || exit 1
+rm -rf "$WD"
