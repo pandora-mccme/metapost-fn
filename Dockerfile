@@ -13,7 +13,7 @@ COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
 # Add non root user
-RUN addgroup -S app && adduser app -S -G app
+RUN adduser --system --group app
 RUN chown app /home/app
 
 WORKDIR /home/app
