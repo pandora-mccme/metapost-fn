@@ -24,6 +24,7 @@ COPY function.sh /home/app/function.sh
 ENV fprocess="bash /home/app/function.sh"
 
 ENV write_debug="false"
+ENV combine_output="false"
 
 EXPOSE 8080
 
