@@ -1,0 +1,5 @@
+provider:
+  name: openfaas
+functions:
+  mptosvg:
+    image: ghcr.io/pandora-mccme/metapost-fn:main
