@@ -20,7 +20,8 @@ WORKDIR /home/app
 
 USER app
 
-#ENV fprocess="convert - -resize 50% fd:1"
+COPY function.sh /home/app/function.sh
+ENV fprocess="bash /home/app/function.sh"
 
 ENV write_debug="false"
 
