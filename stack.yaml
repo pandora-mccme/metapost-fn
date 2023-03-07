@@ -3,3 +3,10 @@ provider:
 functions:
   mptosvg:
     image: ghcr.io/pandora-mccme/metapost-fn:main
+    readonly_root_filesystem: true
+    limits:
+      memory: 40Mi
+      cpu: 200m
+    requests:
+      memory: 20Mi
+      requests: 100m
