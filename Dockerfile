@@ -8,17 +8,16 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
+COPY mptosvg /usr/bin/mptosvg
+RUN chmod +x /usr/bin/mptosvg
 
 # Add non root user
 RUN adduser --system --group app
-
-WORKDIR /home/app
-
 USER app
 
-COPY function.sh /home/app/function.sh
-ENV fprocess="bash /home/app/function.sh"
+WORKDIR /tmp
 
+ENV fprocess="mptosvg"
 ENV write_debug="false"
 ENV combine_output="false"
 
