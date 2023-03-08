@@ -17,7 +17,6 @@ USER app
 
 WORKDIR /tmp
 
-ENV fprocess="mptosvg"
 ENV write_debug="false"
 ENV combine_output="false"
 
