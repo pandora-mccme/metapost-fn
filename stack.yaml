@@ -6,7 +6,7 @@ functions:
     fprocess: "mptosvg"
     readonly_root_filesystem: true
     environment:
-      content_type: "image/svg+xml"
+      content_type: "application/octet-stream"
     limits:
       memory: 40Mi
       cpu: 200m
