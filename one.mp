@@ -1,8 +1,7 @@
 def big(expr z) = 
 begingroup
 save a;
-path a;
-a = fullcircle scaled 3mm;
+path a;a = fullcircle scaled 3mm;
 fill a withcolor black;
 draw a shifted z;
 endgroup
