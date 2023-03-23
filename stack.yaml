@@ -7,10 +7,12 @@ functions:
     readonly_root_filesystem: true
     environment:
       content_type: "application/octet-stream"
-      exec_timeout: 2m
+      exec_timeout: 3m
+      read_timeout: 3m
+      write_timeout: 3m
     limits:
-      memory: 40Mi
-      cpu: 200m
+      memory: 128Mi
+      cpu: 1000m
     requests:
       memory: 20Mi
       requests: 100m
