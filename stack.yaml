@@ -8,8 +8,6 @@ functions:
     environment:
       content_type: "application/octet-stream"
       exec_timeout: 2m
-      read_timeout: 2m
-      write_timeout: 2m
     limits:
       memory: 40Mi
       cpu: 200m
